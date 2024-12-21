@@ -4,6 +4,7 @@
 - NY EOD marks
 - All in Normal Vol - thats current practice, divide by sqrt(252) for bpvol/daily vol
 - ATMF Stike Offsets (bps): `[-200, -100, -50, -25, -10, 0, 10, 25, 50, 100, 200]`
+- SABR Model calibrated using [Differential Evolution](https://en.wikipedia.org/wiki/Differential_evolution) with a Residual Sum of Squares objective function
 - [Bilinear interpolation](https://en.wikipedia.org/wiki/Bilinear_interpolation) is used
 - Schema for EOD JSON file:
 
