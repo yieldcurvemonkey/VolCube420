@@ -5,7 +5,7 @@
 - NY EOD marks
 - All in Normal Vol - thats current practice, divide by sqrt(252) for bpvol/daily vol
 - ATMF Stike Offsets (bps): `[-200, -100, -50, -25, -10, 0, 10, 25, 50, 100, 200]`
-- SABR Model calibrated using [Differential Evolution](https://en.wikipedia.org/wiki/Differential_evolution) with a Residual Sum of Squares objective function
+- SABR Model calibrated using [Differential Evolution](https://en.wikipedia.org/wiki/Differential_evolution) with a Residual Sum of Squares objective function and a refinement using simple Gauss-Newton to minimize the weighted root mean square error in implied volatilities as described in `Le Floc’h` + `Kennedy`'s [Explicit SABR Calibration through Simple Expansions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2467231)
 - [Bilinear interpolation](https://en.wikipedia.org/wiki/Bilinear_interpolation) in log-space (to avoid negative vols when extrapolating) is used
 - `\atm_timeseries` is daily timeseries data of ATMF normal vol quotes in annual json files w/ type `Dict[datetime.strftime("%Y-%m-%d"), List[Dict[str, float]]]`
 
